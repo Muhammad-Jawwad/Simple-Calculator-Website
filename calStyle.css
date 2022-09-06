@@ -1,61 +1,58 @@
-:root {
-	--dark: #374151;
-	--darker: #1F2937;
-	--darkest: #111827;
-	--grey: #6B7280;
-	--pink: #EC4899;
-	--purple: #8B5CF6;
-	--light: #EEE;
-}
-*,*::before,*::after {
-	box-sizing: border-box;
-	font-family: "Fira sans", sans-serif;
-}
-body {
-    margin: 0;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+  
+  body {
     padding: 0;
-    background-color: var(--dark);
-}
-.cal-container {
-    padding-top: 100px;
+    margin: 0;
+    background: linear-gradient(to right, #4c00ff, #ff00d4);
+  }
+  
+  .cal-container {
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     min-height: 100vh;
-    grid-template-columns: repeat(4,100px);
-    grid-template-rows: minmax(120px,auto repeat(5,100px));
-}
-.cal-container > button {
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+  
+  .cal-container > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid var(--darkest);
+    border: 1px solid white;
     outline: none;
-    background-color: var(--light);
-}
-.cal-container > button:hover {
-    background-color: #6B7280;
-}
-.big-button {
+    background-color: rgba(255, 255, 255, .75);
+  }
+  
+  .cal-container > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+  }
+  
+  .big-button {
     grid-column: span 2;
-}
-.output-screen {
-    grid-column: 1/-1;
-    background-color: var(--darkest);
+  }
+  
+  .output-screen {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.795);
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
-    padding: 50px;
+    padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
-}
-.output-screen .pre-output {
-    color: rgba(255, 255, 255, 75);
+  }
+  
+  .output-screen .pre-output {
+    color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
-}
-.output-screen .post-output {
-    color: white;
+  }
+  
+  .output-screen .curr-output {
+    color: rgb(255, 255, 255);
     font-size: 2.5rem;
-}
-
-
+  }
