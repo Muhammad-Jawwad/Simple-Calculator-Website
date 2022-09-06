@@ -26,29 +26,29 @@ class Calculator{
         this.currentOperand = '';
     }
     compute(){
-        const prev = parseFloat(this.previousOperand)
+        const pre = parseFloat(this.previousOperand)
         const curr = parseFloat(this.currentOperand)
-        if (isNaN(prev) || isNaN(curr)) return
+        if (isNaN(pre) || isNaN(curr)) return
         switch (this.operation) {
-            case '+':
-                computation = prev + curr;
+            case "+":
+                computation = pre + curr;
                 break
             case '-':
-                computation = prev - curr;
+                computation = pre - curr;
                 break
             case 'x':
-                computation = prev * curr
+                computation = pre * curr
                 break
             case '÷':
-                computation = prev / curr
+                computation = pre / curr
                 break
             default:
                 return
-    }
+        }
         this.currentOperand = computation;
         this.operation = undefined;
         this.previousOperand = '';
-}
+    }
 
     displayNumber(number) {
         const stringNumber = number.toString()
@@ -82,9 +82,6 @@ class Calculator{
     }
 }
 
-
-
-
 const numButtons = document.querySelectorAll('[data-number]');
 const operatorButtons = document.querySelectorAll('[data-operator]');
 const equalsButton = document.querySelector('[data-equals]');
@@ -110,7 +107,7 @@ operatorButtons.forEach((button) =>{    //for every button
     })
 }) 
 
-equalsButton.addEventListener('click', button => {
+equalsButton.addEventListener('click', (button) => {
     calculator.compute()
     calculator.updateDisplay()
   })
