@@ -1,20 +1,36 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Gotham Rounded, sans-serif;
+    font-family: Montserrat,sans-serif;
     font-weight: normal;
   }
   
   body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #4c00ff, #ff00d4);
+    /* background: linear-gradient(to right, #c602fc,#fd04aa, #c602fc, #fd04aa);  */
+    background: linear-gradient(to right,rgba(74, 74, 74, 0.94),#fbfbfb, rgba(74, 74, 74, 0.94)); 
+  }
+  header h1 {
+    font-size: 70px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 25px;
+    padding-left: 0px;
+    text-decoration: dashed;
+    color: black;
+    text-align: center;
+    letter-spacing: 0.8rem;
+    text-decoration:solid;
+    justify-content: center;
+    background-clip: text;
+    -webkit-background-clip: text;
   }
   
   .cal-container {
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 80vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
   }
@@ -22,13 +38,14 @@
   .cal-container > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border-radius: 0px ;
+    border: 1px solid rgb(0, 0, 0);
     outline: none;
     background-color: rgba(255, 255, 255, .75);
   }
   
   .cal-container > button:hover {
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(74, 74, 74, 0.249);
   }
   
   .big-button {
@@ -37,7 +54,7 @@
   
   .output-screen {
     grid-column: 1 / -1;
-    background-color: rgba(0, 0, 0, 0.795);
+    background-color: rgba(0, 0, 0, 0.891);
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -56,3 +73,16 @@
     color: rgb(255, 255, 255);
     font-size: 2.5rem;
   }
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+.footer {
+  background-color: #020202;
+  color: #fff;
+  font-weight: 1000;
+  letter-spacing: .5rem;
+  padding: .8rem;
+  text-align: center;
+}
