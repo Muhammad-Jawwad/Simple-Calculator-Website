@@ -74,14 +74,12 @@ class Calculator{
         else {
             return integerDisplay
         }
-    }
+     }
 
     updateDisplay() {
-        this.currentOperandTextElement.innerText =
-        this.numberDisplay(this.currentOperand)
+        this.currentOperandTextElement.innerText = this.currentOperand;
         if (this.operation != null) {
-            this.previousOperandTextElement.innerText =
-            `${this.numberDisplay(this.previousOperand)} ${this.operation}`
+            this.previousOperandTextElement.innerText = this.previousOperand + this.operation;
         } 
         else {
             this.previousOperandTextElement.innerText = ''
